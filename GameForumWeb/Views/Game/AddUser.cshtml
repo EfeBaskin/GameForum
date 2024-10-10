@@ -1,0 +1,37 @@
+﻿@model GameForumWeb.Models.User
+@{
+    ViewBag.Title = "AddUser";
+    Layout = "~/Views/Shared/_GameForumLayout.cshtml";
+}
+
+<h2>Add New User</h2>
+
+
+@using (Html.BeginForm("AddUser", "Game", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(model => model.Username, "Username")
+        @Html.TextBoxFor(model => model.Username, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Username)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Email, "Email")
+        @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Email)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Country, "Country")
+        @Html.TextBoxFor(model => model.Country, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Country)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.City, "City")
+        @Html.TextBoxFor(model => model.City, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.City)
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add User</button>
+}

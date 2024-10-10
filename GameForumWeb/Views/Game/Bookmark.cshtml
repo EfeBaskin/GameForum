@@ -1,0 +1,28 @@
+﻿@model IEnumerable<GameForumWeb.Models.Bookmark>
+
+@{
+    ViewBag.Title = "Bookmark";
+    Layout = "~/Views/Shared/_GameForumLayout.cshtml";
+}
+
+<h2>Bookmarked Games</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>User Name</th>
+            <th>Game Name</th>
+            <th>Bookmarked Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.User.Username</td>
+                <td>@item.Game.GameName</td>
+                <td>@item.BookmarkedAt</td>
+            </tr>
+        }
+    </tbody>
+</table>

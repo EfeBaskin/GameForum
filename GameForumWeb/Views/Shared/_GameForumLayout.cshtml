@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Forum</title>
+    <link rel="stylesheet" href="~/Web-MainPage/MainPage.css">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Sidebar Section -->
+        <div id="sidebar">
+            <div class="sidebar-header">
+                <img src="~/Images/İkon.jpg" alt="Website Logo" class="header-image">
+            </div>
+
+            <ul>
+                <li><a href="/Game/Index">All Games</a></li>
+                <li><a href="/Game/Index?platform=PS">PS Games</a></li>
+                <li><a href="/Game/Index?platform=PC">PC Games</a></li>
+                <li><a href="/Game/Bookmark">Bookmarks</a></li>
+            </ul>
+
+            <ul>
+                <li>
+                    <a href="#" id="moreOptionsBtn">More Options &#9662;</a>
+                    <ul id="moreOptionsSidebar" class="submenu">
+                        <li><a href="/Game/AddReview">Add Review</a></li>
+                        <li><a href="#">Add Score</a></li>
+                        <li><a href="/Game/AddGame">Add Game</a></li>
+                        <li><a href="/Game/AddUser">Add User</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+
+
+            <div id="auth-buttons">
+                <a href="#" class="auth-btn">Login</a>
+                <a href="#" class="auth-btn">Log Out</a>
+            </div>
+        </div>
+
+        <!-- Main Content Section -->
+        <div id="mainContent">
+            @RenderBody()
+        </div>
+    </div>
+
+    <script src="~/Web-MainPage/Script.js"></script>
+</body>
+</html>

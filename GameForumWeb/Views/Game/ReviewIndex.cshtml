@@ -1,0 +1,32 @@
+﻿@model IEnumerable<GameForumWeb.Models.Review>
+
+@{
+    ViewBag.Title = "ReviewIndex";
+    Layout = "~/Views/Shared/_GameForumLayout.cshtml";
+}
+
+<h2>All Reviews</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>User Name</th>
+            <th>Game Name</th>
+            <th>Review</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var review in Model)
+        {
+            <tr>
+                <td>@review.User.Username</td>
+                <td>@review.Game.GameName</td>
+                <td>@review.ReviewContent</td>
+                <td>
+                    <a href="@Url.Action("GetUpdatedReview", new { id = review.Id })" class="btn btn-primary">Update</a>
+                    <a href="@Url.Action("DeleteReview", new { id = review.Id })" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

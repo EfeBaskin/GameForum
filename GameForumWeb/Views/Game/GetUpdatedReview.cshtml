@@ -1,0 +1,30 @@
+﻿@model GameForumWeb.Models.Review
+
+@{
+    ViewBag.Title = "Update Review";
+    Layout = "~/Views/Shared/_GameForumLayout.cshtml";
+}
+
+<h2>Edit Review</h2>
+
+@using (Html.BeginForm("UpdateReview", "Game", FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.Id) // Keep the review Id for the update
+
+    <div class="form-group">
+        @Html.Label("User")
+        @Html.DropDownList("userId", (SelectList)ViewBag.Users, "Select User", new { @class = "form-control" }) // Bind to userId
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.GameId, "Game")
+        @Html.DropDownListFor(x => x.GameId, (SelectList)ViewBag.Games, "Select Game", new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.ReviewContent)
+        @Html.TextBoxFor(x => x.ReviewContent, new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-success">Update Review</button>
+}

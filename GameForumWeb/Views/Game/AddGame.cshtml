@@ -1,0 +1,45 @@
+﻿@model GameForumWeb.Models.Game
+@{
+    ViewBag.Title = "Add Game";
+    Layout = "~/Views/Shared/_GameForumLayout.cshtml";
+}
+
+<link rel="stylesheet" href="~/AddGame.css">
+
+<h2>Add New Game</h2>
+
+@using (Html.BeginForm("AddGame", "Game", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="form-group">
+        @Html.LabelFor(model => model.GameName, "Game Name")
+        @Html.TextBoxFor(model => model.GameName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.GameName)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Platform, "Platform")
+        @Html.TextBoxFor(model => model.Platform, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Platform)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Company, "Company")
+        @Html.TextBoxFor(model => model.Company, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Company)
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Image")
+        <div id="drop-area">
+            <p>Drag & Drop your image here or click to select a file</p>
+            <input type="file" id="fileElem" accept="image/*" style="display:none;" onchange="handleFiles(this.files)">
+            <label for="fileElem" id="fileLabel">Select File</label>
+            <img id="preview" src="#" alt="Image Preview" style="display:none; max-width: 100%; height: auto;">
+        </div>
+        @Html.HiddenFor(model => model.ImageUrl) <!-- Hidden input to store the image URL -->
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Game</button>
+}
+
+<script src="~/AddGame.js"></script> 

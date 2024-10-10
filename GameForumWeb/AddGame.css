@@ -1,0 +1,14 @@
+﻿#drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+    width: 300px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto; /* Center the drop area */
+    position: relative; /* Relative positioning for hover effect */
+}
+
+    #drop-area.hover {
+        border-color: #666; /* Change border color on hover */
+    }

@@ -4,6 +4,12 @@
 
 The **Game Forum** is a web application designed to manage and interact with video game content, user reviews, and scores. This project allows users to browse games, submit reviews, rate them and bookmark their favorite games for easy accessa. Built using ASP.NET MVC and Entity Framework, this application provides a user-friendly interface for game enthusiasts.
 
+![ASP.NET MVC]()
+![ASP.NET MVC]()
+![ASP.NET MVC]()
+![ASP.NET MVC]()
+
+
 ## Features
 
 - **Game Management**: View and manage a list of games with detailed information.
@@ -20,7 +26,7 @@ The **Game Forum** is a web application designed to manage and interact with vid
 
 ## MVC Model
 
-![ASP.NET MVC](URL_TO_YOUR_IMAGE)
+![ASP.NET MVC](https://github.com/EfeBaskin/GameForum/blob/main/img/asp.net%20mvc%20image.png?raw=true)
 
 ### Overview of ASP.NET MVC
 

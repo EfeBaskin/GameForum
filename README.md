@@ -4,10 +4,10 @@
 
 The **Game Forum** is a web application designed to manage and interact with video game content, user reviews, and scores. This project allows users to browse games, submit reviews, rate them and bookmark their favorite games for easy accessa. Built using ASP.NET MVC and Entity Framework, this application provides a user-friendly interface for game enthusiasts.
 
-![ASP.NET MVC]()
-![ASP.NET MVC]()
-![ASP.NET MVC]()
-![ASP.NET MVC]()
+![ASP.NET MVC](https://github.com/EfeBaskin/GameForum/blob/main/img/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202024-10-11%20015606.png?raw=true)
+![ASP.NET MVC](https://github.com/EfeBaskin/GameForum/blob/main/img/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202024-10-11%20015511.png?raw=true)
+![ASP.NET MVC](https://github.com/EfeBaskin/GameForum/blob/main/img/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202024-10-11%20015453.png?raw=true)
+![ASP.NET MVC](https://github.com/EfeBaskin/GameForum/blob/main/img/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202024-10-11%20015440.png?raw=true)
 
 
 ## Features
@@ -94,14 +94,15 @@ To create a new ASP.NET MVC application, you can use Visual Studio or the .NET C
 
 ## Contributing
 
-Contributions are welcome! If you have suggestions for improvements or features, please follow these steps:
+Feel free to contribute as this project is still being improved. If you have suggestions for improvements or features, please follow these steps:
 
 1. Fork the repository.
 2. Create a new branch for your feature or bug fix:
    ```bash
    git checkout -b feature-name
    git commit -m "Add a new feature or fix a bug"
-   git commit -m "Add a new feature or fix a bug"
+   git push -u origin main/master  (depends on your current branch)
+
 3. Open a pull request describing your changes
 
 

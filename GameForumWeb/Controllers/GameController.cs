@@ -95,7 +95,7 @@ namespace GameForumWeb.Controllers
         {
             var review = db.Reviews.Find(id);
 
-            // Assuming that the review still has a GameId
+            
             ViewBag.Games = new SelectList(db.Games, "Id", "GameName", review.GameId);
 
             return View(review);
@@ -110,7 +110,7 @@ namespace GameForumWeb.Controllers
             {
                 existingReview.GameId = review.GameId;
                 existingReview.ReviewContent = review.ReviewContent;
-                existingReview.UserId = userId; // Ensure UserId is set correctly
+                existingReview.UserId = userId; 
 
                 db.SaveChanges();
             }

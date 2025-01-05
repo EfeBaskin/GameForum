@@ -29,10 +29,9 @@ function handleFiles(files) {
 
         reader.onload = function (e) {
             previewImage.src = e.target.result; 
-            // previewImage.style.display = 'block'; this line is for showing the preview
             imagePathInput.value = e.target.result; // Store data URL in hidden input
         }
 
-        reader.readAsDataURL(file); // Read the image file as a data URL
+        reader.readAsDataURL(file);
     }
 }
